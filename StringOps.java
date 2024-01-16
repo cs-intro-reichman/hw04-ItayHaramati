@@ -28,29 +28,27 @@ public class StringOps {
             System.out.println(arr[i]);
         }
     }
-    
-    public static String capVowelsLowRest (String string) {
-        String newStr="";
-        for(int i=0; i<string.length(); i++)
-        {
-            char ch = string.charAt(i);
-            if((ch==97)||(ch==101)||(ch==105)||(ch==111)||(ch==117)) //upper (a,e,i,o,u)
-            {
-                newStr=newStr+(char)(string.charAt(i)-32);
-            }
-            else
-            {
-                if((ch>=64)&&(ch<=91))
-            {
-                newStr=newStr+(char)(string.charAt(i)+32);
-            }
-            else{
-                newStr=newStr+(char)(string.charAt(i));
-            }
-            }
-        }
-        return newStr;
-    }
+        public static String capVowelsLowRest(String String) {
+            String vowels = "aeiou"; 
+            String VOWELS = "AEIOU";
+            String s1 = "";
+            for(int i = 0; i < String.length(); i++){
+              if(vowels.indexOf(String.charAt(i)) != -1)
+                 s1 += (char) (String.charAt(i) - 32); 
+                  else if(VOWELS.indexOf(String.charAt(i)) != -1) {
+                      s1+= String.charAt(i);
+                    }  else {
+                      if(vowels.indexOf(String.charAt(i)) == -1 && VOWELS.indexOf(String.charAt(i)) == -1) {
+                        }  if(String.charAt(i) >= 'A' && String.charAt(i) <= 'Z') {
+                           s1 += (char) (String.charAt(i) + 32);
+                             }  else  {
+                               s1+= String.charAt(i);  
+                         }
+                        }
+                      } 
+              return s1;
+          }
+      
 
 
     public static String camelCase (String string) {
