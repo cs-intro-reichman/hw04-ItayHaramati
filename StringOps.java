@@ -33,11 +33,12 @@ public class StringOps {
             String VOWELS = "AEIOU";
             String s1 = "";
             for(int i = 0; i < String.length(); i++){
+              // TODO: hard to read code. Because at least of bad indentation
               if(vowels.indexOf(String.charAt(i)) != -1)
                  s1 += (char) (String.charAt(i) - 32); 
-                  else if(VOWELS.indexOf(String.charAt(i)) != -1) {
+                  else if(VOWELS.indexOf(String.charAt(i)) != -1) { // TODO: wrong indentation
                       s1+= String.charAt(i);
-                    }  else {
+                    }  else { // TODO: wrong indentation
                       if(vowels.indexOf(String.charAt(i)) == -1 && VOWELS.indexOf(String.charAt(i)) == -1) {
                         }  if(String.charAt(i) >= 'A' && String.charAt(i) <= 'Z') {
                            s1 += (char) (String.charAt(i) + 32);
@@ -52,11 +53,11 @@ public class StringOps {
 
 
     public static String camelCase (String string) {
-        String newword = "";
+        String newword = ""; // TODO: use camelCase for variable names - "newWord" here
 
         //// Changing the first letter to small letter
             char first = string.charAt(0);
-            int num = (int) first;
+            int num = (int) first; // no need this casting
             if (num >= 65 && num <= 90) {
                 num = num + 32;
                 char e = (char) num;

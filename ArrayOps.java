@@ -51,7 +51,8 @@ public class ArrayOps {
 
 
     public static boolean containsTheSameElements(int [] array1,int [] array2) {
-        int count1 = 0;
+        int count1 = 0; // TODO: A local variable should be declared close to the place in the code in which it is used 
+                        //       Read here: https://docs.google.com/document/d/178R1ZbXLUT6myw2JjPhYRTL3mfb6oNSe/edit?usp=sharing&ouid=104564852744387575478&rtpof=true&sd=true
         int count2 = 0;
         for (int i = 0; i < array1.length; i++) {
             for (int j = 0; j < array2.length; j++) {
@@ -61,6 +62,7 @@ public class ArrayOps {
                 }
             }
         }
+        // TODO: it's not good to repeat your code. Use helper functions
         for (int i = 0; i < array2.length; i++) {
             for (int j = 0; j < array1.length; j++) {
                 if (array2[i] == array1[j]) {
